@@ -54,8 +54,7 @@ function setup() {
 function draw() {
   background(255);
 // Depura el siguiente código
-  kangaroo.x=camera.positionX-270;
-  
+kangaroo.x=camera.position.x-270;   
   if (gameState===PLAY){
 
     jungle.velocityX=-3
@@ -119,7 +118,9 @@ function spawnShrubs() {
     // Encuentra el error en el siguiente código
     switch(rand) {
       case 1: shrub.addImage(shrub1);
+      break;
       case 2: shrub.addImage(shrub2);
+      break;
       case 3: shrub.addImage(shrub3);
       default: break;
     }
